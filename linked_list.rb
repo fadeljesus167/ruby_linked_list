@@ -8,14 +8,20 @@ class Node
 end
 
 class List
-  attr_accessor :list
-
   def initialize
-    @list = 
+    @head = Node.new
   end
 
   def append(value)
-
+    if @head.next_node.nil?
+      @head.next_node = value
+    else
+      node = @head.next_node
+      while !node.nil?
+        node = node.next_node
+      end
+      
+    end
   end
 
   def prepend(value)
@@ -27,7 +33,7 @@ class List
   end
 
   def head
-
+    return @head
   end
 
   def tail
