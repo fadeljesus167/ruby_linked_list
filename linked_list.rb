@@ -146,8 +146,11 @@ end
 
 list = LinkedList.new
 
-list.prepend("one")
-list.prepend("two")
-list.prepend("three")
+list.append('dog')
+list.append('cat')
+list.append('parrot')
+list.append('hamster')
+list.append('snake')
+list.append('turtle')
 
 puts list.to_s
